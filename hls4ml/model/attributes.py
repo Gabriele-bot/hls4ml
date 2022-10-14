@@ -1,6 +1,6 @@
 from collections.abc import MutableMapping
 
-from hls4ml.model.types import InplaceVariable, NamedType, TensorVariable, WeightVariable, Source
+from hls4ml.model.types import InplaceVariable, NamedType, TensorVariable, WeightVariable
 
 class Attribute(object):
     def __init__(self, name, value_type=int, default=None, configurable=False):
@@ -39,10 +39,6 @@ class VariableAttribute(Attribute):
 class WeightAttribute(Attribute):
     def __init__(self, name):
         super(WeightAttribute, self).__init__(name, value_type=WeightVariable, default=None, configurable=False)
-
-class CodeAttrubute(Attribute):
-    def __init__(self, name):
-        super(WeightAttribute, self).__init__(name, value_type=Source, default=None, configurable=False)
 
 class AttributeDict(MutableMapping):
     def __init__(self, layer):
@@ -122,7 +118,3 @@ class VariableMapping(AttributeMapping):
 class TypeMapping(AttributeMapping):
     def __init__(self, attributes):
         super().__init__(attributes, NamedType)
-
-class CodeMapping(AttributeMapping):
-    def __init__(self, attributes):
-        super().__init__(attributes, Source)
