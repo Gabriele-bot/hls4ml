@@ -64,8 +64,8 @@ class VivadoAcceleratorWriter(VivadoWriter):
                                indent + 'out_struct(double data) {this->data = data; this->last = 0;}\n' + \
                                '} output_axi_t;\n'
                 else:
-                    newline += 'typedef {} input_axi_t;\n'.format(inp_axi_t)
-                    newline += 'typedef {} output_axi_t;\n'.format(out_axi_t)
+                    newline += 'typedef ap_{} input_axi_t;\n'.format(inp_axi_t)
+                    newline += 'typedef ap_{} output_axi_t;\n'.format(out_axi_t)
             else:
                 newline = line
             fout.write(newline)

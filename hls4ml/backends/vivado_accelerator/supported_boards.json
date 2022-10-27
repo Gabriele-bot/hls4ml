@@ -13,9 +13,9 @@
   },
   "alveo-u50": {
     "part": "xcu50-fsvh2104-2-e",
-    "tcl_scripts": {"axi_stream": "axi_stream_design.tcl"},
-    "python_drivers": {"axi_stream": "axi_stream_driver.py"},
-    "krnl_rtl_srcs": {"axi_stream":  "krnl_rtl_src"},
+    "tcl_scripts": {"axi_stream": "axi_stream_design.tcl", "axi_master": "axi_master_design.tcl"},
+    "python_drivers": {"axi_stream": "axi_stream_driver.py", "axi_master": "axi_master_driver.py"},
+    "krnl_rtl_srcs": {"axi_stream":  "krnl_rtl_src", "axi_master":  "krnl_rtl_src"},
     "c_drivers": {}
   },
   "alveo-u250": {
